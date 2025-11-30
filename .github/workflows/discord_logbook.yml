@@ -15,7 +15,7 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         with:
           args: |
-            **New Commit by ${{ github.actor }}**
+            **${{ github.actor }}** pushed to branch `${{ github.ref_name }}`
             ```
             ${{ github.event.head_commit.message }}
             ```
