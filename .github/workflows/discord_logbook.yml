@@ -16,7 +16,6 @@ jobs:
         with:
           args: |
             **New Commit by ${{ github.actor }}**
-            
-            ```md 
+            ```
             ${{ github.event.head_commit.message }}
             ```
