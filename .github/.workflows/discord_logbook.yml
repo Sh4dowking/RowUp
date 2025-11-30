@@ -1,0 +1,21 @@
+name: Discord Logbook
+
+on: [push]
+
+jobs:
+  discord-notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Discord Notification
+        uses: ilshidur/action-discord@master
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        with:
+          args: |
+            **New Commit by ${{ github.actor }}**
+            Repository: ${{ github.repository }}
+            
+            >>> ${{ github.event.head_commit.message }}
