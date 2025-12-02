@@ -19,6 +19,12 @@ class RowingApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
         useMaterial3: true,
       ),
+      darkTheme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red, brightness: Brightness.dark),
+        useMaterial3: true,
+        brightness: Brightness.dark
+      ),
+      debugShowCheckedModeBanner: false,
       home: const MainPage(),
     );
   }
@@ -53,8 +59,13 @@ class MainPageState extends State<MainPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Rowing App'),
-        backgroundColor: Theme.of(context).primaryColor,
+        title: Text(
+            'Rowing App',
+          style: TextStyle(
+            color: Theme.of(context).colorScheme.onPrimary,
+          ),
+        ),
+        backgroundColor: Theme.of(context).colorScheme.primary,
       ),
       body: screens[screenIndex],
       bottomNavigationBar: BottomNavigationBar(
