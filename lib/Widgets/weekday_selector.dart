@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rowing_app/Widgets/weekday_box.dart';
 
-typedef DaySelectedCallback = void Function(int index);
+typedef DaySelectedCallback = void Function(int dayIndex);
 
 class WeekdaySelector extends StatefulWidget {
   final DaySelectedCallback onDaySelected;
@@ -24,16 +24,16 @@ class _WeekdaySelectorState extends State<WeekdaySelector> {
       padding: EdgeInsets.all(12),
       height: screenHeight * 0.075,
       child: Row(
-        children: List.generate(days.length, (index) {
+        children: List.generate(days.length, (dayIndex) {
           return Expanded(
             child: WeekdayBox(
-              title: days[index],
-              isSelected: selectedDay == index,
-              onTap: () {
+              title: days[dayIndex],
+              isSelected: selectedDay == dayIndex,
+              onPressed: () {
                 setState(() {
-                  selectedDay = index;
+                  selectedDay = dayIndex;
                 });
-                widget.onDaySelected(index);
+                widget.onDaySelected(dayIndex);
               },
             ),
           );
