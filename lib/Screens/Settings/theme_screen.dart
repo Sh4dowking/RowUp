@@ -9,15 +9,6 @@ class ThemeScreen extends StatefulWidget {
 }
 
 class _ThemeScreenState extends State<ThemeScreen> {
-  late ThemeMode _currentThemeMode;
-
-  @override
-  void initState() {
-    super.initState();
-    // Get the current theme mode from the app
-    _currentThemeMode = themeNotifier.value;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,12 +27,7 @@ class _ThemeScreenState extends State<ThemeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      'Theme Mode',
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    Text('Theme Mode', style: TextStyle(color: AppColors.onSurface(context)),),
                     ValueListenableBuilder<ThemeMode>(
                       valueListenable: themeNotifier,
                       builder: (context, themeMode, child) {
@@ -72,7 +58,7 @@ class _ThemeScreenState extends State<ThemeScreen> {
                       },
                     ),
                   ],
-                ),
+                ), 
               ),
             ),
           ),
@@ -92,39 +78,18 @@ class _ThemeScreenState extends State<ThemeScreen> {
         themeNotifier.value = mode;
       },
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 2.0, vertical: 2),
         padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
         decoration: BoxDecoration(
-          color: isLightMode(context)
-              ? isSelected
-                  ? burgundy
-                  : coolWhite
-              : isSelected
-                  ? white.withValues(alpha: 0.2)
-                  : steel,
+          color: isSelected ? AppColors.accent(context) : null,
           borderRadius: BorderRadius.circular(8.0),
-          boxShadow: [
-            BoxShadow(
-              color: isLightMode(context)
-                  ? Colors.grey.withOpacity(0.4)
-                  : Colors.black.withOpacity(0.6),
-              spreadRadius: 1,
-              blurRadius: 3,
-              offset: const Offset(0, 2),
-            ),
-          ],
         ),
         child: Center(
           child: Text(
             label,
             style: TextStyle(
-              fontSize: 12,
               color: isSelected
-                  ? Colors.white
-                  : isLightMode(context)
-                      ? Colors.black
-                      : Colors.white,
-              fontWeight: FontWeight.bold,
+                  ? AppColors.onPrimary(context)
+                  : AppColors.onSurface(context),
             ),
           ),
         ),

@@ -74,84 +74,57 @@ class CalendarScreenState extends State<CalendarScreen>{
                   formatButtonVisible: false,
                   titleCentered: true,
                   titleTextStyle: TextStyle(
-                    color: isLightMode(context)
-                      ? Theme.of(context).colorScheme.onSurface
-                      : white,
+                    color: AppColors.onPrimary(context),
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
                   ),
                   leftChevronIcon: Icon(
                     Icons.chevron_left,
-                    color: isLightMode(context)
-                      ? burgundy
-                      : white,
+                    color: AppColors.onPrimary(context),
                   ),
                   rightChevronIcon: Icon(
                     Icons.chevron_right,
-                    color: isLightMode(context)
-                      ? burgundy
-                      : white,
+                    color: AppColors.onPrimary(context),
                   ),
                 ),
                 calendarStyle: CalendarStyle(
                   todayDecoration: BoxDecoration(
-                    color: isLightMode(context)
-                      ? burgundy.withValues(alpha: 0.3)
-                      : white.withValues(alpha: 0.2),
+                    color: AppColors.red,
                     shape: BoxShape.circle,
                   ),
                   todayTextStyle: TextStyle(
-                    color: isLightMode(context)
-                      ? Theme.of(context).colorScheme.onSurface
-                      : white,
+                    color: AppColors.onSurface(context),
                     fontWeight: FontWeight.bold,
                   ),
                   selectedDecoration: BoxDecoration(
-                    color: isLightMode(context)
-                      ? burgundy.withValues(alpha: 0.7)
-                      : white.withValues(alpha: 0.3),
+                    color: AppColors.accent(context),
                     shape: BoxShape.circle,
                   ),
                   selectedTextStyle: TextStyle(
-                    color: isLightMode(context)
-                      ? white
-                      : Theme.of(context).colorScheme.surface,
+                    color: AppColors.onPrimary(context),
                     fontWeight: FontWeight.bold,
                   ),
-                  markersMaxCount: 1,
                   markerDecoration: BoxDecoration(
-                    color: isLightMode(context)
-                      ? burgundy
-                      : white,
+                    color: AppColors.lightAccent(context),
                     shape: BoxShape.circle,
                   ),
                   defaultTextStyle: TextStyle(
-                    color: isLightMode(context)
-                      ? Theme.of(context).colorScheme.onSurface
-                      : white,
+                    color: AppColors.onSurface(context),
                   ),
-                  weekendTextStyle: TextStyle(
-                    color: isLightMode(context)
-                      ? Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7)
-                      : white.withValues(alpha: 0.7),
+                   weekendTextStyle: TextStyle(
+                    color: AppColors.description(context),
                   ),
                   outsideTextStyle: TextStyle(
-                    color: isLightMode(context)
-                      ? Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3)
-                      : white.withValues(alpha: 0.3),
+                    color: AppColors.description(context),
                   ),
                 ),
                 daysOfWeekStyle: DaysOfWeekStyle(
                   weekdayStyle: TextStyle(
-                    color: isLightMode(context)
-                      ? Theme.of(context).colorScheme.onSurface
-                      : white,
+                    color: AppColors.onSurface(context),
                     fontWeight: FontWeight.bold,
                   ),
                   weekendStyle: TextStyle(
-                    color: isLightMode(context)
-                      ? Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7)
-                      : white.withValues(alpha: 0.7),
+                    color: AppColors.description(context),
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -171,27 +144,21 @@ class CalendarScreenState extends State<CalendarScreen>{
                             vertical: 4.0,
                           ),
                           decoration: BoxDecoration(
+                            color: AppColors.surface(context),
                             borderRadius: BorderRadius.circular(12.0),
-                            color: isLightMode(context)
-                              ? coolWhite
-                              : steel.withValues(alpha: 0.2),
                           ),
                           child: ListTile(
                             onTap: () => print('${value[index].title} pressed!'),
                             title: Text(
                               value[index].title,
                               style: TextStyle(
-                                color: isLightMode(context)
-                                  ? Theme.of(context).colorScheme.onSurface
-                                  : white,
+                                color: AppColors.onSurface(context),
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
                             leading: Icon(
                               Icons.event,
-                              color: isLightMode(context)
-                                ? burgundy
-                                : white,
+                              color: AppColors.accent(context),
                               size: 24,
                             ),
                           ),
