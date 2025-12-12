@@ -1,4 +1,4 @@
-package com.chirila.schmidig.rowing_app
+package app.rowup.row_up
 
 import io.flutter.embedding.android.FlutterActivity
 

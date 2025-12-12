@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rowing_app/Theme/theme_manager.dart';
+import 'package:row_up/Theme/theme_manager.dart';
 
 class EventCard extends StatelessWidget {
   final String title;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../Screens/profile_screen.dart';
 import '../Screens/settings_screen.dart';
-import 'package:rowing_app/Theme/theme_manager.dart';
+import 'package:row_up/Theme/theme_manager.dart';
 
 class InformationDrawer extends StatelessWidget {
   const InformationDrawer({super.key});

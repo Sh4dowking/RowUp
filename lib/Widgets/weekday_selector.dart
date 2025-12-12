@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rowing_app/Widgets/weekday_box.dart';
+import 'package:row_up/Widgets/weekday_box.dart';
 
 typedef DaySelectedCallback = void Function(int dayIndex);
 

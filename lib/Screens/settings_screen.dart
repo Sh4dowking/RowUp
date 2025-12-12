@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rowing_app/Widgets/settings_entry.dart';
+import 'package:row_up/Widgets/settings_entry.dart';
 
 import 'Settings/language_screen.dart';
 import 'Settings/notifications_screen.dart';

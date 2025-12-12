@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:rowing_app/Screens/calendar_screen.dart';
-import 'package:rowing_app/Screens/notifications_screen.dart';
-import 'package:rowing_app/Theme/theme_manager.dart';
-import 'package:rowing_app/Widgets/information_drawer.dart';
+import 'package:row_up/Screens/calendar_screen.dart';
+import 'package:row_up/Screens/notifications_screen.dart';
+import 'package:row_up/Theme/theme_manager.dart';
+import 'package:row_up/Widgets/information_drawer.dart';
 import 'Screens/home_screen.dart';
 
 void main() {

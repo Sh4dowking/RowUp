@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rowing_app/Classes/event_class.dart';
-import 'package:rowing_app/Theme/theme_manager.dart';
+import 'package:row_up/Classes/event_class.dart';
+import 'package:row_up/Theme/theme_manager.dart';
 
 class EventDetailsScreen extends StatelessWidget {
   final Event event;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:rowing_app/Screens/event_details_screen.dart';
-import 'package:rowing_app/Theme/theme_manager.dart'; // Import theme manager
-import 'package:rowing_app/Widgets/event_card.dart';
-import 'package:rowing_app/Widgets/weekday_selector.dart';
+import 'package:row_up/Screens/event_details_screen.dart';
+import 'package:row_up/Theme/theme_manager.dart'; // Import theme manager
+import 'package:row_up/Widgets/event_card.dart';
+import 'package:row_up/Widgets/weekday_selector.dart';
 
 import '../Classes/event_class.dart';
 

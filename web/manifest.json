@@ -1,11 +1,11 @@
 {
-    "name": "rowing_app",
-    "short_name": "rowing_app",
+    "name": "row_up",
+    "short_name": "row_up",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Rowing Training Mangement Mobile Application for Ruderclub Cham",
+    "description": "A Simple Schedule Management Application",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
