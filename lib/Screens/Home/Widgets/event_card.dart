@@ -35,7 +35,7 @@ class _EventCardState extends State<EventCard> {
         borderRadius: BorderRadius.circular(16),
         side: BorderSide(
           color: AppColors.onSurface(context).withValues(alpha: 0.08),
-          width: 1,
+          width: 2,
         ),
       ),
       child: InkWell(
